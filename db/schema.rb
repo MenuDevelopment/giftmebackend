@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20180525141320) do
   create_table "gifts", force: :cascade do |t|
     t.bigint "user_id"
     t.string "item"
-    t.decimal "price"
+    t.float "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_gifts_on_user_id"
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20180525141320) do
   create_table "pledges", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "gift_id"
-    t.decimal "amount"
+    t.float "amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["gift_id"], name: "index_pledges_on_gift_id"

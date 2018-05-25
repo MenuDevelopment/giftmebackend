@@ -3,7 +3,7 @@ class CreatePledges < ActiveRecord::Migration[5.1]
     create_table :pledges do |t|
       t.references :user, foreign_key: true
       t.references :gift, foreign_key: true
-      t.decimal :amount
+      t.float :amount
 
       t.timestamps
     end
