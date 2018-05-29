@@ -11,6 +11,15 @@ module Api
       end
 
       def create
+        byebug
+        @user = User.create({
+          username: params[:username],
+          email: params[:email],
+          payment: params[:payment],
+          password: params[:password]
+        })
+
+        render json: @user
       end
 
       def update
