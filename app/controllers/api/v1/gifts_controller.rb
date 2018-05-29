@@ -8,20 +8,11 @@ module Api
       end
 
       def show
-        if params[:user_id]
-          render json: User.find(params[:user_id]).created_gifts.find(params[:id])
-        else
-          render json: @gift
-        end
+        render json: @gift
       end
 
       def index
-        if params[:user_id]
-          @user = User.find(params[:user_id])
-          render json: @user.created_gifts
-        else
-          render json: Gift.all
-        end
+        render json: Gift.all
       end
 
       private
