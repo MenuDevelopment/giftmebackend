@@ -5,6 +5,7 @@ class Api::V1::UsersController < ApplicationController
     render json: User.all
   end
 
+
   def show
     render json: @user
   end
@@ -14,6 +15,8 @@ class Api::V1::UsersController < ApplicationController
 
     @user.username = params[:username]
     @user.password = params[:password]
+    @user.email = params[:email]
+    @user.payment = params[:payment]
 
     if (@user.save)
       render json: token_json(@user)
