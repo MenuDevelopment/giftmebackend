@@ -9,10 +9,14 @@
 users = []
 
 20.times do
+  name = Faker::Internet.user_name
+  pass = Faker::Internet.password
+  p name
+  p pass
   users.push(User.create({
-    username: Faker::Internet.user_name,
+    username: name,
     email: Faker::Internet.email,
-    password: Faker::Internet.password,
+    password: pass,
     payment: Faker::Bitcoin.address
     }))
 end

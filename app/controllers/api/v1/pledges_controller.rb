@@ -1,7 +1,4 @@
-module Api
-  module V1
-    class PledgesController < ApplicationController
 
-    end
-  end
+class Api::V1::PledgesController < ApplicationController
+
 end
