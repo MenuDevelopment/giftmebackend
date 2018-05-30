@@ -12,12 +12,15 @@ class Api::V1::UsersController < ApplicationController
 
   def create
     @user = User.new
+    p "hi"
+
 
     @user.username = params[:username]
     @user.password = params[:password]
     @user.email = params[:email]
     @user.payment = params[:payment]
-
+    p @user
+    p params
     if (@user.save)
       render json: token_json(@user)
     else
