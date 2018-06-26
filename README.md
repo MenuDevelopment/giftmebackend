@@ -12,4 +12,5 @@ Navigate to the root directory and run the following commands:
 * rails db:migrate
 * rails db:reset
 * rails s
+
 Make sure it is running on port 3000
