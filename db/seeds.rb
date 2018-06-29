@@ -8,6 +8,13 @@
 
 users = []
 
+users.push(User.create({
+  username: "test",
+  email: Faker::Internet.email,
+  password: "test",
+  payment: Faker::Bitcoin.address
+  }))
+
 20.times do
   name = Faker::Internet.user_name
   pass = Faker::Internet.password
